@@ -182,7 +182,7 @@ hr {
 }
 
 .b-card {
-    grid-column: span 3;
+    grid-column: span 4;
     vertical-align: top;
     border-radius: 3px;
     padding: 5px;
@@ -223,4 +223,8 @@ hr {
 
 .blog-page h1,h2,h3 {
     color: var(--secondary-color);
+}
+
+.blog-page p a {
+    text-decoration: none;
 }
