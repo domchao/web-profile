@@ -67,6 +67,7 @@ Here are the key features I found (N.B. ChatGPT is structured very similarly):
 <br>
 
 (Truncated) example of normal `chat_messages` JSON:
+
 ```json
 {
     "chat_messages": [
@@ -99,6 +100,7 @@ Here are the key features I found (N.B. ChatGPT is structured very similarly):
 <br>
 
 Example with an artifact:
+
 ```json
 {
     "chat_messages": [
