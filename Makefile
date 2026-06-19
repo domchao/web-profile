@@ -3,7 +3,7 @@ SRC_DIR := ./
 DEST_DIR := ./output
 
 # Files to copy (space-separated list)
-FILES := index.html style.css renderMarkdownFile.js
+FILES := index.html style.css renderMarkdownFile.js theme.js
 
 # Directories to copy (space-separated list)
 DIRS := assets blog
