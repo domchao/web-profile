@@ -1,138 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DomChao</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dominic Chaopradith</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="theme.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="row">
-            <h2 class="headerLeft">DC</h2>
-            <nav class="headerRight">
-                <a class="darkerText" href="https://github.com/domchao" target="_blank">GitHub</a>
-                <a class="darkerText" href="https://www.linkedin.com/in/dominic-chaopradith-057288119/" target="_blank">LinkedIn</a>
-            </nav>
+  <div class="wrap">
+
+    <header class="masthead">
+      <div class="masthead-top">
+        <div class="eyebrow">Dominic Chaopradith</div>
+        <div class="masthead-controls">
+          <div class="masthead-links">
+            <a href="https://github.com/domchao" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/dominic-chaopradith-057288119/" target="_blank">LinkedIn</a>
+          </div>
+          <button id="theme-toggle" aria-label="Toggle theme">
+            <span class="light-icon">☾</span>
+            <span class="dark-icon">☀</span>
+          </button>
         </div>
+      </div>
+
+      <div class="masthead-body">
+        <div class="masthead-text">
+          <h1>AI engineer <em>and</em> data scientist.</h1>
+          <p class="intro">
+            Senior Data Scientist at Aviva, building GenAI applications and data-driven products.
+            Previously at the Ministry of Defence training RNNs, CNNs, and Bi-LSTMs.
+            PhD in Computational Chemistry from UCL.
+            <br><br>
+            I like solving problems with code, learning new things, and thinking about thinking.
+            Get in touch at <a href="mailto:d.chaopradith@gmail.com">d.chaopradith@gmail.com</a>.
+          </p>
+          <nav class="toc">
+            <a href="#experience"><span class="n">01</span> Experience</a>
+            <a href="#writing"><span class="n">02</span> Writing</a>
+          </nav>
+        </div>
+        <img class="profile-pic" src="./assets/profile_pic.jpg" alt="Dominic Chaopradith" />
+      </div>
     </header>
-    <main>
-        <section>
-            <div class="row">
-                <div class="nameContainer">
-                    <h1>Dominic Chaopradith</h1>
-                    <p class="darkerText">Full-stack data scientist & machine learning engineer.</p>
-                </div>  
-            </div>
-            <div class="row">
-                <div id="profile-pic">
-                    <img src="./assets/profile_pic.jpg" alt="profile-img" />
-                </div>
-            </div>
-            <div class="row">
-                <p class="nameContainer">I like solving problems with code, learning new things, and thinking about thinking.</p>
-                <div class="outreachContainer">
-                    <a href="mailto:d.chaopradith@gmail.com" class="outreach darkerText row">
-                        <p id="email-text">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
-                            Email me
-                        </p>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <hr>
-        <section>
-            <div class="history">
-                <div class="row">
-                    <div class="timespan">Now - 2022</div>
-                    <div class="h-icon">
-                        <div class="entry-dot"></div>
-                        <img src="./assets/logos/aviva_plc_logo.jpeg">
-                    </div>
-                    <div class="h-desc">
-                        Senior Data Scientist at Aviva. 
-                        <br><br>
-                        Building GenAI Applications. Training small LMs for topic and sentiment classification of customer feedback.
-                        Developing propensity models and data pipelines for data driven marketing and customer understanding. 
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="timespan">2022 - 2017</div>
-                    <div class="h-icon">
-                        <div class="entry-dot"></div>
-                        <img src="./assets/logos/uk_ministry_of_defence_logo.jpeg">
-                    </div>
-                    <div class="h-desc">
-                        Data Scientist & Machine Learning Engineer at the Ministry of Defence.
-                        <br><br>
-                        Training, deploying, and implementing; RNNs for machine translation, 
-                        CNNs for object detection and image classification, Bi-LSTMs for speech-to-text.
-                        Using word and image embeddings for multi-lingual and image similarity search.
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="timespan">2017 - 2013</div>
-                    <div class="h-icon">
-                        <div class="entry-dot"></div>
-                        <img src="./assets/logos/university_college_london_logo.jpeg">
-                    </div>
-                    <div class="h-desc">
-                        Computational Chemistry PhD at University College London. 
-                        <br><br>
-                        Using high performance computing for simulating (i) surface reaction chemistry for the catalytic partial 
-                        oxidation of methane process and (ii) material structural properties of the catalyst yttria-stabilised zirconia.
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="timespan">2012 - 2008</div>
-                    <div class="h-icon">
-                        <div class="entry-dot"></div>
-                        <img src="./assets/logos/university_of_bath_logo.jpeg">
-                    </div>
-                    <div class="h-desc">
-                        Undergrad Masters in Chemistry at the Univeristy of Bath. 
-                        <br><br>
-                        Making biofuels from algae as a final year project.
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr>
-        <section>
-            <div class="blog">
-                <div class="row">
-                    <p class="darkerText">Blog</p>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="b-card">
-                        <a href="./blog/_1_demystifying_llms/_1_demystifying_llms.html" target="_blank">
-                            <img src="./blog/_1_demystifying_llms/pics/gpt_assistant_training.png">
-                            <p class="b-title">Demystifying LLMs</p>
-                        </a>
-                    </div>
-                    <div class="b-card">
-                        <a href="./blog/_2_experimenting_with_multi_modal/_2_multi_modal.html" target="_blank">
-                            <img src="./blog/_2_experimenting_with_multi_modal/pics/calendar_update_img.png">
-                            <p class="b-title">Multi Modal Models</p>
-                        </a>
-                    </div>
-                    <div class="b-card">
-                        <a href="./blog/_3_copying_claude/_3_copying_claude.html" target="_blank">
-                            <img src="./blog/_3_copying_claude/pics/open_artifact.png">
-                            <p class="b-title">Copying Claude</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-    
-                </div>
-            </div>
-        </section>
-    </main>
+
+    <section id="experience">
+      <div class="sec-head">
+        <span class="idx">01</span>
+        <h2>Experience</h2>
+        <span class="count">4 roles</span>
+      </div>
+      <div class="log-strip">
+
+        <div class="log-row">
+          <div class="date">Now — 2022</div>
+          <div class="role-badge ds">Data Science</div>
+          <div class="log-content">
+            <strong>
+              <img class="company-logo" src="./assets/logos/aviva_plc_logo.jpeg" alt="Aviva">
+              Senior Data Scientist · Aviva
+            </strong>
+            Building GenAI applications. Training small LMs for topic and sentiment classification of customer feedback.
+            Developing propensity models and data pipelines for data-driven marketing and customer understanding.
+          </div>
+        </div>
+
+        <div class="log-row">
+          <div class="date">2022 — 2017</div>
+          <div class="role-badge ml">ML Eng</div>
+          <div class="log-content">
+            <strong>
+              <img class="company-logo" src="./assets/logos/uk_ministry_of_defence_logo.jpeg" alt="Ministry of Defence">
+              Data Scientist & ML Engineer · Ministry of Defence
+            </strong>
+            Training, deploying, and implementing RNNs for machine translation, CNNs for object detection and image
+            classification, Bi-LSTMs for speech-to-text. Using word and image embeddings for multi-lingual and image
+            similarity search.
+          </div>
+        </div>
+
+        <div class="log-row">
+          <div class="date">2017 — 2013</div>
+          <div class="role-badge phd">PhD</div>
+          <div class="log-content">
+            <strong>
+              <img class="company-logo" src="./assets/logos/university_college_london_logo.jpeg" alt="UCL">
+              Computational Chemistry PhD · UCL
+            </strong>
+            Using high-performance computing to simulate surface reaction chemistry for the catalytic partial oxidation
+            of methane and material structural properties of yttria-stabilised zirconia.
+          </div>
+        </div>
+
+        <div class="log-row">
+          <div class="date">2012 — 2008</div>
+          <div class="role-badge edu">Masters</div>
+          <div class="log-content">
+            <strong>
+              <img class="company-logo" src="./assets/logos/university_of_bath_logo.jpeg" alt="University of Bath">
+              Integrated Masters in Chemistry · University of Bath
+            </strong>
+            Making biofuels from algae as a final-year research project.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="writing">
+      <div class="sec-head">
+        <span class="idx">02</span>
+        <h2>Writing</h2>
+        <span class="count">3 posts</span>
+      </div>
+      <div class="grid">
+
+        <a class="card" href="./blog/_1_demystifying_llms/_1_demystifying_llms.html" target="_blank">
+          <div class="thumb">
+            <img src="./blog/_1_demystifying_llms/pics/gpt_assistant_training.png" alt="Demystifying LLMs">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Demystifying LLMs</div>
+            <div class="card-desc">A ground-up walkthrough of how large language models are trained — pretraining, supervised fine-tuning, and RLHF.</div>
+            <div class="card-file">_1_demystifying_llms.md <span class="arrow">→</span></div>
+          </div>
+        </a>
+
+        <a class="card" href="./blog/_2_experimenting_with_multi_modal/_2_multi_modal.html" target="_blank">
+          <div class="thumb">
+            <img src="./blog/_2_experimenting_with_multi_modal/pics/calendar_update_img.png" alt="Multi Modal Models">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Multi Modal Models</div>
+            <div class="card-desc">Exploring GPT-4o's vision capabilities by building a calendar app that reads handwritten schedules from photos.</div>
+            <div class="card-file">_2_multi_modal.md <span class="arrow">→</span></div>
+          </div>
+        </a>
+
+        <a class="card" href="./blog/_3_copying_claude/_3_copying_claude.html" target="_blank">
+          <div class="thumb">
+            <img src="./blog/_3_copying_claude/pics/open_artifact.png" alt="Copying Claude">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Copying Claude</div>
+            <div class="card-desc">Reverse-engineering the Claude.ai interface — the artifact system, chat mechanics, and system prompt structure.</div>
+            <div class="card-file">_3_copying_claude.md <span class="arrow">→</span></div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <footer>
+      <span class="k">DC</span>
+      <span>
+        <a href="https://github.com/domchao" target="_blank">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/dominic-chaopradith-057288119/" target="_blank">LinkedIn</a> ·
+        <a href="mailto:d.chaopradith@gmail.com">Email</a>
+      </span>
+    </footer>
+
+  </div>
 </body>
 
 </html>
