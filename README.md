@@ -4,6 +4,7 @@ My web profile. Done as plainly as possible. An exercise for me to get more hand
 
 - The inspiration and styling orginated from [this repo][smol-james-repo] and [tutorial][smol-james-video]
 - The timeline and other styling was inspried by [Andrej Karpathy's profile][karpathy-profile]
+- The revamp 'light mode' styling was inspired by [this great blog][html-effectiveness-blog] and [accompanying guide][html-effectiveness-examples]
 
 ## Deployment
 
@@ -15,3 +16,5 @@ My web profile. Done as plainly as possible. An exercise for me to get more hand
 [smol-james-repo]: https://github.com/jamezmca/ultimate-web-portfolio
 [karpathy-profile]: https://karpathy.ai/
 [netlify-link]: https://www.netlify.com/
+[html-effectiveness-blog]: https://claude.dev/blog/using-claude-code-the-unreasonable-effectiveness-of-html/
+[html-effectiveness-examples]: https://thariqs.github.io/html-effectiveness/
