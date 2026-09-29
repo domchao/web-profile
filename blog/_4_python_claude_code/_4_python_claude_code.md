@@ -1,17 +1,14 @@
 # Python Claude Code
 
-(alternative title: "Read / Write / Edit / Bash")
+##### 2026-09-28
 
+(alternative title: "Read / Write / Edit / Bash")
 
 ![Python claude code CLI pic](./pics/cli.png) 
 
-
-
 ## TL;DR
 
-
 I wrote [my very own coding agent](https://github.com/domchao/python-claude-code), from scratch, in Python. 
-
 
 ## What is an AI Agent?
 
@@ -27,7 +24,6 @@ This is incredibly powerful, and rests on both 'intelligence' and knowledge with
 
 LLM tool use is what makes an AI agent. In the setting of a coding agent it can sometimes feel like magic, but I also think it's good to remember that at some level it's just tokens in and tokens out.
 
-
 ## Claude Code
 
 Claude Code is Anthropic's coding agent. It uses the Claude models to help you perform coding tasks. It began the coding agent paradigm shift within software engineering, and when I used it for the first time it felt like a real light switch moment. Going from "tab auto-complete", and copy/pasting code to and responses from *just* an LLM chat application, to an actual coding agent like Claude Code was a huge leap. 
@@ -37,7 +33,6 @@ One of the striking things about Claude Code to me is it's simplicity, both on p
 As a product it just works. It provides simplicity to the user.
 
 As a concept - and this is where the simplicity really shines - it's basic aim of being a coding agent rested on being in the same place as human coders (the terminal), and having access to the same tools as them (bash / cli tools).
-
 
 ## Context engineering and harnesses
 

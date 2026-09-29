@@ -1,70 +1,40 @@
 # Copying Claude
 
-<br>
+##### 2025-01-12
 
 ![Open artifact pic](./pics/open_artifact.png) 
 
-<br>
-
 ## TL;DR
-
-<br>
 
 I had a go at copying the [Claude][claude-link] app, creating [my own chat app][llm-chat-app-link] (with a lot of Claude's help!) that gets an LLM to output artifacts if necessary and have the frontend render them side-by-side with the rest of the conversation.
 
-<br>
-
 ## Models vs Applications
-
-<br>
 
 Before we dive into the chat app I just wanted to say a quick piece about the current state of play of commercial GenAI, in particular that the terminology is pretty inconsistent and confusing.
 
-<br>
-
 ChatGPT and Claude are applications. They encompass (in amongst many things I'm sure to miss) the frontend code and logic for what you see and are able to do, user managment and e.g. history of different conversations, maintaining a single conversation history for providing the conversation context to the models, and actually calling the llms with the user input and handling the model outputs/response.
-
-<br>
 
 These applications are powered by models like GPT-4o or Claude-3.5-Sonnet. Models do the generative magic, and applications wrap-around the model outputs and make them more easy-to-use and user-friendly. 
 
-<br>
-
 Models and model-powered applications are often wrongly conflated and I think making this separation clearer and more obvious will actually help people understand these tools and how to use them better.
-
-<br>
 
 ## Why copy Claude?
 
-<br>
-
 Basically because I think it's great. I love the side-by-side nature of co-creating something with a model but having the actual artifact you're working on separate to the conversation about it.
-
-<br>
 
 I've been creating GenAI applications at work to help people use LLMs to perform certain tasks, but these have mostly been what I'd call 'form-based' applications. How it typically goes is essentially doing some prompt-engineering alongside the end user, to understand the problem they trying to solve, and finding the best ways to prompt the LLMs to help achieve that. For example this could be adding in some tone of voice wording so that the generated output 'sounds right', or finding ways to insert knowledge to ground the output in the 'facts' we want it to talk about. The end result is often some 'form' of inputs that users put whatever they need in to, that gets combined in the backend into the 'best-practice' prompt so that the output generation is guided in the right way and sticks to the right information. 
 
-<br>
-
 This is quick to do and is a great start, but it has limitations. The most obvious one is that this is 'single-shot' generation. You give the inputs once and get the output once, there's limited room to iterate. This also isn't how we're used to interacting with models as they're typically in chat-based applications like Claude or ChatGPT. Chat and iteration are really powerful ways of working with these models so I wanted to explore how I could replicate this for my internal use cases - hence copying Claude.
-
-<br>
 
 ## How does Claude work?
 
-<br>
-
 In trying to copy Claude, so that I could create an internal chat application, I set about trying to reverse-engineer what was going on. I was able to do this using the browser developer tools and inspecting the different page elements and network calls.
-
-<br>
 
 Here are the key features I found (N.B. ChatGPT is structured very similarly):
 - There's a `/new` URL route for the initial page (that you get re-directed to when you 'start a new chat')
 - New chats - when populated - get re-directed to a `/chat/uuid/` URL
 - When you load a chat page at one of these URLs the page data JSON object that gets sent to the browser has a `chat_messages` field that contains the conversation history (content and associated metadata).
 - When you get Claude to create an artifact it's contained within the normal model response, wrapped in `<antArtifact>` tags.
-
-<br>
 
 (Truncated) example of normal `chat_messages` JSON:
 
@@ -97,8 +67,6 @@ Here are the key features I found (N.B. ChatGPT is structured very similarly):
 }
 ```
 
-<br>
-
 Example with an artifact:
 
 ```json
@@ -130,27 +98,15 @@ Example with an artifact:
 }
 ```
 
-<br>
-
 ## `<antArtifact>` - the secret sauce
-
-<br>
 
 This is the crux of how it all works. When the model generates its output, if something should be an artifact it gets wrapped in these tags. The frontend can then parse this content and conditionally handle the rendering to get that great side-by-side feel to the interaction. However, as the artifact is actually just in the model output it can easily be fed back in as part of the conversation history so the model has context of what's being created. Simple. Beautiful.
 
-<br>
-
 How does the model wrap things in `<antArtifact>` tags? I'm not 100% sure but it's most-likely part of the post-training and/or/both system-prompting. Feeding in datasets of ideal input/output pairs that has examples of this artifact creation that steers the model to generate things in tags.
-
-<br>
 
 How can **__I__** get the model to output tags? System prompting! Having seen the tag-wrapping behaviour I was then able to find [this great article][claude-reverse-eng-article] about how the Claude model is prompted to output artifacts. I tried it, it worked, now we're cooking with gas.
 
-<br>
-
 ## The final output
-
-<br>
 
 After understanding how the Claude app is structured and finding out about the `<antArtifact>` tags approach I was then able to set about re-creating this myself. Full disclosure I had a lot of help from Claude, creating different React components, understanding how to lay it out and the frontend functionality, etc. It was a combination of knowing what I was trying to do, inspecting lots of divs, and asking Claude the right questions. But it was fun and shockingly quick to get a working (but worse) replica.
 
